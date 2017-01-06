@@ -37,6 +37,7 @@ $font-url--google         : "https://fonts.googleapis.com/css?family=Lora:400,40
 $helvetica-font-stack     : "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 $stack-ptSans           : 'PT Sans', $helvetica-font-stack;
+$stack-ptSansCaption    : 'PT Sans Caption', $helvetica-font-stack;
 $stack-loraDisplay          : 'Lora', sans-serif;
 
 
@@ -187,6 +188,22 @@ div.showDoctorList {
     color: $betterGrey;
   }
   ul {
+    font-family: $stack-ptSansCaption;
     font-size: 1em;
+    line-height: 1.2;
+    & li:nth-of-type(2){
+      font-weight: 700;
+    }
+    & li:last-of-type {
+      font-family: $stack-ptSans;
+      margin-top: .25em;
+      font-weight: 700;
+    }
+  }
+  img {
+    width: 33%;
+    margin: .5em 0;
+    border-radius: .25em;
+    border: 1px solid $betterGrey;
   }
 }
