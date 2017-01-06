@@ -1,0 +1,158 @@
+@import "bourbon/bourbon";
+@import "base/base";
+
+
+//global config
+* {
+  box-sizing: border-box;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  margin:0;
+  padding:0;
+  text-align: center;
+  font-family: $heading-font-family;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+//
+
+
+$font-url--google         : "https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|PT+Sans+Caption:400,700|PT+Sans+Narrow:700|PT+Sans:400,400i,700";
+
+
+$helvetica-font-stack     : "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$stack-ptSans           : 'PT Sans', $helvetica-font-stack;
+$stack-loraDisplay          : 'Lora', sans-serif;
+
+
+$font-family--primary     : $stack-ptSans;
+
+// Asset paths
+
+$path-img  : '../img';
+$path-font : '../fonts';
+
+
+
+
+// Breakpoints
+
+// Media queries
+
+// $brk-narrow   : '(max-width: 768px)';
+// $brk-medium   : '(max-width:960px)';
+// $brk-wide     : '(max-width:1240px)';
+
+
+// @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+
+/* Smartphones (landscape) ----------- */
+// @media only screen and (min-width : 321px)
+/* Styles */
+
+
+/* Smartphones (portrait) ----------- */
+// @media only screen and (max-width : 320px)
+/* Styles */
+
+/* Desktops and laptops ----------- */
+// @media only screen  and (min-width : 1224px)
+/* Styles */
+
+
+/* Large screens ----------- */
+// @media only screen  and (min-width : 1824px)
+/* Styles */
+
+// Utilities
+
+// Import if google fonts URL is defined
+
+@if variable-exists (font-url--google) {
+  @import url($font-url--google);
+}
+
+// Calculate em values
+
+@function em($target, $context: $base__font-size) {
+  @return ($target / $context) * 1em;
+}
+
+//END utilities
+
+
+//Typography
+
+p {
+  font-family: $stack-ptSans;
+  font-size: 1.5em;
+  line-height:  $base__line;
+  color: $betterGrey;
+  text-align: center;
+  font-weight: 400;
+}
+h1 h2 h3 h4 h5 h6 {
+  font-family:gulp  $stack-loraDisplay;
+  font-size: $base-font-size;
+  line-height:  $base__line;
+  color: $betterGrey;
+  font-weight: 700;
+}
+
+//End typography
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin-right: 0;
+  padding: 0;
+}
+fieldset {
+  padding: 5em;
+  p {
+    text-align: left;
+  }
+}
+
+form {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  h2 {
+    font-size: 2em;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  p {
+    text-align: left;
+    button {
+      width: 20%;
+      text-align: center;
+      padding: .75em;
+      box-shadow: 1px 1px 3px $betterGrey;
+      color: $white;
+      &:hover {
+        color: $betterBackground;
+      }
+    }
+  }
+}
+[type="text"] {
+  width: 80%;
+}

@@ -1,0 +1,64 @@
+// Descriptive Base Colors
+
+$white          : #fff;
+$black          : #0b0b0b;
+$grey           : #797e83;
+
+$betterPurple   :
+#8c2577;
+$betterLtBlue   : #54b4d2;
+$betterGrey       : #676767;
+$betterBackground : #f2f2f2;
+
+
+
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Typography
+$base-font-family: 'PT Sans', sans-serif;
+$heading-font-family: 'Lora', serif;
+
+
+// Base font size
+
+$base-font-size : 16px;
+$base__line      : 24px;
+
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+// Font Colors
+$base-font-color: $betterGrey;
+$action-color: $betterPurple;
+
+// Border
+$base-border-color: $betterGrey;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: $betterBackground;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

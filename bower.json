@@ -1,0 +1,21 @@
+{
+  "name": "doctors-new",
+  "description": "Epicodus Javascript Week One Independent Project",
+  "main": "index.js",
+  "authors": [
+    "Suzi Rubino"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
