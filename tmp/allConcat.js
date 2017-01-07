@@ -13,7 +13,7 @@ $(document).ready(function() {
     var userIssue = $('#issue').val();
 
     $('#issue').val("");
-    $("#appendDr").remove();
+    $("ul").remove();
 
     $('.showIssue').text(userIssue);
 
