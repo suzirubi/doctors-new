@@ -23,11 +23,8 @@ $(document).ready(function() {
 
     $('.showIssue').text(userIssue);
 
-    var newList = currentGetDoctor.getDoctorList(userIssue);
+    currentGetDoctor.getDoctorList(userIssue);
 
-    console.log(newList);
-
-    // $('.doctorList').append('<ul id="appendDr"><li><img src="'+ imageDr + '" alt="doctor photo"/></li><li> Dr. ' + name + '</li><li>' + address + '</li><li>' + cityState + '</li><li>' + phone + '</li></ul>');
 
   });
 });
