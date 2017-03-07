@@ -11,7 +11,6 @@ h1 h2 h3 h4 h5 h6 {
   margin:0;
   padding:0;
   text-align: center;
-  font-family: $heading-font-family;
 }
 a {
   text-decoration: none;
@@ -31,24 +30,17 @@ ol {
 //
 
 
-$font-url--google         : "https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|PT+Sans+Caption:400,700|PT+Sans+Narrow:700|PT+Sans:400,400i,700";
+$font-url--google       : "https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|PT+Sans+Caption:400,700|PT+Sans+Narrow:700|PT+Sans:400,400i,700";
 
 
-$helvetica-font-stack     : "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$helvetica-font-stack   : "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 $stack-ptSans           : 'PT Sans', $helvetica-font-stack;
 $stack-ptSansCaption    : 'PT Sans Caption', $helvetica-font-stack;
-$stack-loraDisplay          : 'Lora', sans-serif;
+$stack-loraDisplay      : 'Lora', sans-serif;
 
 
-$font-family--primary     : $stack-ptSans;
-
-// Asset paths
-
-$path-img  : '../img';
-$path-font : '../fonts';
-
-
+$font-family--primary   : $stack-ptSans;
 
 
 // Breakpoints
@@ -102,17 +94,13 @@ $path-font : '../fonts';
 p {
   font-family: $stack-ptSans;
   font-size: 1.5em;
-  line-height:  $base__line;
+  line-height: $base-line-height;
   color: $betterGrey;
-  text-align: center;
   font-weight: 400;
 }
 h1 h2 h3 h4 h5 h6 {
-  font-family:gulp  $stack-loraDisplay;
-  font-size: $base-font-size;
-  line-height:  $base__line;
-  color: $betterGrey;
-  font-weight: 700;
+  font-family:  $stack-loraDisplay;
+  line-height: $heading-line-height;
 }
 
 //End typography
@@ -120,18 +108,48 @@ h1 h2 h3 h4 h5 h6 {
 .container {
   width: 100vw;
   height: 100vh;
-  margin-right: 0;
-  padding: 0;
 }
+
 fieldset {
-  margin: 2.5em 2.5em .5em 2.5em;
-  padding: 2.5em 2.5em .5em 2.5em;
+  margin: 2em 2em .5em 2em;
+  padding: 2em 2em .5em 2em;
   border-radius: .5em;
   p {
     text-align: left;
   }
   background-color: $betterBackground;
 }
+
+div.intro {
+  width: 100%;
+  height: 10em;
+  display: inline-block;
+  margin-bottom: 2em;
+  svg {
+    height: 100%;
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
+  h1 {
+    font-size: 3em;
+    text-transform: capitalize;
+    color: $betterPurple;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    margin-top: .5em;
+  }
+  .subhead {
+    font-size: .55em;
+    line-height: 1;
+    font-weight: 400i;
+    font-style: italic;
+    color: $betterLtBlue;
+  }
+}
+
+
 
 form {
   width: 100%;
@@ -149,9 +167,9 @@ form {
   p {
     text-align: left;
     button {
-      width: 20%;
+      width: 30%;
       text-align: center;
-      padding: .75em;
+      padding: .5em .1em;
       box-shadow: 1px 1px 3px $betterGrey;
       color: $white;
       &:hover {
@@ -166,13 +184,14 @@ form {
     font-size: .75em;
   }
 }
+
 div.showUserIssue {
   display: none;
   width: 80%;
   text-align: left;
-  margin: 2em 5em;
+  margin: 2em 2.5em;
   h3 {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 400i;
     font-style: italic;
     color: $betterLtBlue;
@@ -182,7 +201,7 @@ div.showDoctorList {
   display: none;
   width: 80%;
   text-align: left;
-  margin: 2em 5em;
+  margin: 2em 2.5em;
   h3 {
     font-size: 1.5em;
     color: $betterGrey;
